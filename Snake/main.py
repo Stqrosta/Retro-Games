@@ -16,7 +16,7 @@ body = [(x,y)]
 pos = []
 
 squares = [i for i in range(640) if i % 32 == 0]
-food = pygame.image.load('/Users/mikolajszczerbetka/Desktop/Python_projects/Snake/fruit.png')
+food = pygame.image.load('fruit.png')
 food = pygame.transform.scale(food, (32,32))
 foodx,foody = random.choice(squares), random.choice(squares)
 
@@ -50,7 +50,7 @@ while running:
     elif body[0][1] > 608 or body[0][1] < 0:
         running = False
 
-    snakeImg = [pygame.transform.scale(pygame.image.load('/Users/mikolajszczerbetka/Desktop/Python_projects/Snake/snakeblock.png'), (32,32)) for i in range(len(body))]
+    snakeImg = [pygame.transform.scale(pygame.image.load('snakeblock.png'), (32,32)) for i in range(len(body))]
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
